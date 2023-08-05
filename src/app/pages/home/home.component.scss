@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&family=Barlow:wght@400;500;700&display=swap');
+$my-font-family: 'Anonymous Pro', monospace;
+$font-family: 'Barlow', sans-serif;
+$my-font-color: #fff;
+$my-heading-font-clr:#605e6d;
+$my-green-color:#a6ffb0;
+.content{
+width: 100%;
+height: 100vh;
+background-color: #0e0d13;
+ .main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: transparent;
+    color: $my-font-color;
+    font-family: $my-font-family;
+
+ }
+ .maintwo{
+    background-color: #333;
+
+    .btn-outline-secondary {
+        color:  $my-green-color;
+        background-color:  #333;
+        border-color: $my-green-color;
+        width: 100%;
+        border-radius: 0;
+        padding: 15px 0;
+        font-size: 24px;
+        letter-spacing: 4px;
+        font-weight: 700;
+        &:hover {
+            color: #333;
+            background-color: $my-green-color;
+            border-color: $my-green-color;
+            font-weight: 700;
+        }
+        &:active {
+            color: #333;
+            background-color: $my-green-color;
+            border-color: $my-green-color;
+            font-weight: 700;
+        }
+    }
+
+   
+ }
+}
+.mat-icon{
+    color: $my-green-color;
+}
+.mat-form-field{
+    background-color: #333;
+}
+.mat-mdc-form-field {
+    --mat-mdc-form-field-floating-label-scale: 0.75;
+    display: inline-flex;
+    flex-direction: column;
+    min-width: 100%;
+    text-align: left;
+}
+
+::ng-deep.mdc-text-field__input {
+    height: 50px !important;
+    width: 100%;
+    min-width: 100%;
+    border: none;
+    border-radius: 0;
+    background: none;
+    appearance: none;
+    padding: 0;
+    background-color: #333;
+    color: $my-font-color;
+}
+
+::ng-deep.mdc-text-field {
+   border: 0 !important;
+    display: inline-flex;
+    align-items: baseline;
+    padding: 0 16px;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    will-change: opacity,transform,color;
+    background-color: #333 !important;
+    font-size: 24px !important;
+}
+input.example-right-align::-webkit-outer-spin-button,
+input.example-right-align::-webkit-inner-spin-button {
+  display: none;
+}
+.mat-mdc-slider {
+    display: inline-block;
+    box-sizing: border-box;
+    outline: none;
+    vertical-align: middle;
+    margin-left: 8px;
+    margin-right: 8px;
+    width: auto;
+    min-width: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+    background-color: #a6ffb0; /*replace with your color*/
+}
+
+::ng-deep .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+    background-color: #a6ffb0;  /*replace with your color*/
+}
+
+::ng-deep .mat-mdc-slider .mdc-slider__track {
+    height: var(--mdc-slider-inactive-track-height, 4px);
+    background-color: #b1ccb4;
+}
+::ng-deep.mdc-slider__thumb-knob{
+ background-color: #a6ffb0;
+}
+ ::ng-deep.mat-mdc-slider .mdc-slider__track--active_fill {
+    border-color:  #a6ffb0 !important;
+}
+
+::ng-deep.mdc-checkbox:hover .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background, 
+.mdc-checkbox:hover .mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background, 
+.mdc-checkbox:hover .mdc-checkbox__native-control[data-indeterminate=true]:enabled~.mdc-checkbox__background {
+    border-color: #333;
+    background-color: $my-green-color !important;
+}
+::ng-deep.mdc-checkbox:active .mdc-checkbox__native-control~.mdc-checkbox__ripple {
+    opacity: var(--mdc-checkbox-unselected-pressed-state-layer-opacity);
+    background-color:$my-green-color !important;
+}
