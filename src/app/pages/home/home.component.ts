@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit {
   form: FormGroup | any;
   PasswordArray: { name: string; checked: boolean; char: string; }[] | any;
   password: any = '';
-  constructor() { }
+  constructor(private toastr: ToastrService) { }
   ngOnInit(): void {
     this.form = new FormGroup({
       upperCase: new FormControl(false),
@@ -55,7 +55,7 @@ export class HomeComponent implements OnInit {
     return 'auto';
   }
   clipboard() {
-   
+    this.toastr.success('Your Password has been copied');
   }
   changeEvent(event: any, type: string) {
     console.log(this.form.value, event, type)
