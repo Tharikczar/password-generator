@@ -67,9 +67,20 @@ export class HomeComponent implements OnInit {
     console.log(this.PasswordArray)
     this.password = '';
   }
+
+  onslideInputChange(event:any){
+    console.log(event);
+    this.form.reset();
+    this.password = '';
+    this.PasswordArray.forEach((element: any) => {
+      element['checked'] = false;                                     /// reset the checked value
+                               
+    })
+
+  }
   generatePwd() {
 
-    let newPwd = '';
+    let newPwd = ''; this.password='';
     this.PasswordArray.forEach((element: any) => {
       if (element['checked'] == true) {
         newPwd += element['char'];                         /// concatenate two strings

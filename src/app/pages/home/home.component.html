@@ -25,7 +25,7 @@
           [discrete]="thumbLabel"
           [showTickMarks]="showTicks"
         >
-          <input matSliderThumb [(ngModel)]="value" #slider />
+          <input matSliderThumb [(ngModel)]="value" #slider (input)="onslideInputChange($event)" />
         </mat-slider>
       </div>
       <div  [formGroup]="form">
