@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit {
   form: FormGroup | any;
   PasswordArray: { name: string; checked: boolean; char: string; }[] | any;
   password: any = '';
-  constructor(private toastr: ToastrService) { }
+  constructor() { }
   ngOnInit(): void {
     this.form = new FormGroup({
       upperCase: new FormControl(false),
@@ -55,7 +55,7 @@ export class HomeComponent implements OnInit {
     return 'auto';
   }
   clipboard() {
-    this.toastr.success("Password has been copied successfully");
+   
   }
   changeEvent(event: any, type: string) {
     console.log(this.form.value, event, type)
@@ -65,6 +65,7 @@ export class HomeComponent implements OnInit {
       }
     });
     console.log(this.PasswordArray)
+    this.password = '';
   }
   generatePwd() {
 
@@ -95,5 +96,10 @@ export class HomeComponent implements OnInit {
     this.form.reset();
     this.value = 5;
     this.password = '';
+    this.PasswordArray.forEach((element: any) => {
+      element['checked'] = false;                                     /// reset the checked value
+                               
+    })
+    console.log(this.PasswordArray)
   }
 }
